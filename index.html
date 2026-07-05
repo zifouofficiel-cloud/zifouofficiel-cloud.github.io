@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zifou Officiel</title>
+    <title>Zifou Officiel | الحساب الرسمي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         body {
-            background-color: #0b0c10 !important;
-            background: linear-gradient(135deg, #0b0c10 0%, #1a1c23 100%) !important;
+            background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #ffffff;
             display: flex;
@@ -19,29 +19,34 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
         .profile-card {
-            background: rgba(30, 33, 45, 0.8) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(30, 33, 45, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 24px;
             padding: 35px 25px;
             width: 100%;
             max-width: 400px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
+
         .avatar-container {
             position: relative;
             width: 130px;
             height: 130px;
             margin: 0 auto 15px;
         }
+
         .avatar {
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
+
         .verified-badge {
             position: absolute;
             bottom: 5px;
@@ -57,37 +62,57 @@
             font-size: 13px;
             border: 2px solid #1e212d;
         }
+
         h1 {
             font-size: 24px;
             color: #d4af37;
             margin: 10px 0 5px;
+            font-weight: 700;
         }
+
         .username {
             font-size: 14px;
             color: #b3b9c9;
             margin-bottom: 25px;
+            direction: ltr;
         }
+
         .bio {
             font-size: 13.5px;
             line-height: 1.6;
             color: #b3b9c9;
             margin-bottom: 30px;
         }
+
         .section-title {
             font-size: 15px;
             color: #d4af37;
             text-align: right;
             margin: 25px 5px 15px;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 14px;
+            background: #d4af37;
+            border-radius: 2px;
+        }
+
         .links-container {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
+
         .btn-link {
-            background: rgba(255, 255, 255, 0.05) !important;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 16px;
             padding: 16px 18px;
             display: flex;
@@ -95,12 +120,35 @@
             align-items: center;
             text-decoration: none;
             color: #ffffff;
+            transition: all 0.3s ease;
         }
+
         .btn-link div {
             display: flex;
             align-items: center;
             gap: 12px;
         }
+
+        .btn-link i.icon-main {
+            font-size: 18px;
+        }
+
+        .btn-link span {
+            font-size: 14.5px;
+            font-weight: 500;
+        }
+
+        .btn-link i.fa-chevron-left {
+            font-size: 11px;
+            color: #b3b9c9;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
         footer {
             margin-top: 35px;
             font-size: 11px;
@@ -113,7 +161,7 @@
     <div class="profile-card">
         <div class="avatar-container">
             <img src="file_00000000d9e071f4beb55ef0783fdebc.png" alt="Zifou" class="avatar">
-            <div class="verified-badge">
+            <div class="verified-badge" title="حساب موثق">
                 <i class="fas fa-check"></i>
             </div>
         </div>
@@ -123,44 +171,49 @@
         
         <p class="bio">خدمات رقمية متكاملة | متخصص في توثيق وبناء حسابات إنستغرام، وتوفير الحلول المالية والبطاقات الافتراضية للتسوق والترويج الإعلاني.</p>
 
-        <div class="section-title">│ خدماتنا الاحترافية</div>
+        <div class="section-title">خدماتنا الاحترافية</div>
         <div class="links-container">
+            <!-- زر التوثيق للواتساب مباشرة -->
             <a href="https://wa.me/21655754413?text=مرحباً%20زيفو،%20أريد%20معرفة%20كيفية%20وشروط%20توثيق%20حساب%20إنستغرام" target="_blank" class="btn-link">
                 <div>
-                    <i class="fas fa-certificate" style="color: #0095f6;"></i>
+                    <i class="fas fa-certificate icon-main" style="color: #0095f6;"></i>
                     <span>توثيق حسابات إنستغرام لشخصيات ومشاريع</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
             </a>
 
+            <!-- زر الفيزا للواتساب -->
             <a href="https://wa.me/21655754413?text=مرحباً%20زيفو،%20أريد%20طلب%20بطاقة%20فيزا%20افتراضية" target="_blank" class="btn-link">
                 <div>
-                    <i class="fas fa-credit-card" style="color: #4CAF50;"></i>
+                    <i class="fas fa-credit-card icon-main" style="color: #4CAF50;"></i>
                     <span>بطاقات فيزا الدولية للتسوق والإعلانات</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
             </a>
         </div>
 
-        <div class="section-title">│ قنوات التواصل الرسمية</div>
+        <div class="section-title">قنوات التواصل الرسمية</div>
         <div class="links-container">
+            <!-- إنستغرام -->
             <a href="https://instagram.com/compte_officiel_zifou" target="_blank" class="btn-link">
                 <div>
-                    <i class="fab fa-instagram" style="color: #E1306C;"></i>
+                    <i class="fab fa-instagram icon-main" style="color: #E1306C;"></i>
                     <span>إنستغرام الرسمي</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
             </a>
+            <!-- واتساب -->
             <a href="https://wa.me/21655754413" target="_blank" class="btn-link">
                 <div>
-                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    <i class="fab fa-whatsapp icon-main" style="color: #25D366;"></i>
                     <span>تواصل عبر الواتساب</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
             </a>
+            <!-- الفيسبوك المعاد -->
             <a href="https://facebook.com" target="_blank" class="btn-link">
                 <div>
-                    <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
+                    <i class="fab fa-facebook-f icon-main" style="color: #1877F2;"></i>
                     <span>فيسبوك</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
