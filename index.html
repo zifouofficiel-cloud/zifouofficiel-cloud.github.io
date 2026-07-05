@@ -7,21 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        :root {
-            --bg-gradient: linear-gradient(135deg, #0b0c10 0%, #1a1c23 100%);
-            --card-bg: rgba(30, 33, 45, 0.65);
-            --accent-color: #d4af37; /* ذهبي ملكي فخم */
-            --accent-glow: rgba(212, 175, 55, 0.3);
-            --text-main: #ffffff;
-            --text-secondary: #b3b9c9;
-            --btn-bg: rgba(255, 255, 255, 0.04);
-            --btn-border: rgba(255, 255, 255, 0.08);
-        }
-
         body {
-            background: var(--bg-gradient);
+            background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-main);
+            color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,23 +21,21 @@
         }
 
         .profile-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 40px 30px;
+            background: rgba(30, 33, 45, 0.75);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 35px 25px;
             width: 100%;
-            max-width: 420px;
+            max-width: 400px;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 50px rgba(212, 175, 55, 0.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         .avatar-container {
             position: relative;
-            width: 140px;
-            height: 140px;
-            margin: 0 auto 20px;
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 15px;
         }
 
         .avatar {
@@ -56,8 +43,8 @@
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid var(--accent-color);
-            box-shadow: 0 0 25px var(--accent-glow);
+            border: 3px solid #d4af37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
 
         .verified-badge {
@@ -66,41 +53,40 @@
             right: 5px;
             background: #0095f6;
             color: white;
-            width: 30px;
-            height: 30px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 14px;
-            border: 3px solid #1e212d;
+            font-size: 13px;
+            border: 2px solid #1e212d;
         }
 
         h1 {
-            font-size: 26px;
-            color: var(--accent-color);
+            font-size: 24px;
+            color: #d4af37;
             margin: 10px 0 5px;
             font-weight: 700;
-            text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
         }
 
         .username {
-            font-size: 15px;
-            color: var(--text-secondary);
+            font-size: 14px;
+            color: #b3b9c9;
             margin-bottom: 25px;
             direction: ltr;
         }
 
         .bio {
-            font-size: 14px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 35px;
+            font-size: 13.5px;
+            line-height: 1.6;
+            color: #b3b9c9;
+            margin-bottom: 30px;
         }
 
         .section-title {
-            font-size: 16px;
-            color: var(--accent-color);
+            font-size: 15px;
+            color: #d4af37;
             text-align: right;
             margin: 25px 5px 15px;
             font-weight: 600;
@@ -113,53 +99,58 @@
             content: '';
             display: inline-block;
             width: 4px;
-            height: 16px;
-            background: var(--accent-color);
+            height: 14px;
+            background: #d4af37;
             border-radius: 2px;
         }
 
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
 
         .btn-link {
-            background: var(--btn-bg);
-            border: 1px solid var(--btn-border);
-            border-radius: 18px;
-            padding: 18px 20px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 16px 18px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             text-decoration: none;
-            color: var(--text-main);
+            color: #ffffff;
             transition: all 0.3s ease;
         }
 
         .btn-link div {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .btn-link i.icon-main {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .btn-link span {
-            font-size: 15px;
+            font-size: 14.5px;
             font-weight: 500;
         }
 
+        .btn-link i.fa-chevron-left {
+            font-size: 11px;
+            color: #b3b9c9;
+        }
+
         .btn-link:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(212, 175, 55, 0.4);
+            border-color: rgba(212, 175, 55, 0.3);
         }
 
         footer {
-            margin-top: 40px;
+            margin-top: 35px;
             font-size: 11px;
             color: rgba(255, 255, 255, 0.3);
         }
@@ -182,7 +173,7 @@
 
         <div class="section-title">خدماتنا الاحترافية</div>
         <div class="links-container">
-            <!-- زر التوثيق المعدل للواتساب مباشرة بطلب الكيفية والشروط -->
+            <!-- زر التوثيق للواتساب مباشرة -->
             <a href="https://wa.me/21655754413?text=مرحباً%20زيفو،%20أريد%20معرفة%20كيفية%20وشروط%20توثيق%20حساب%20إنستغرام" target="_blank" class="btn-link">
                 <div>
                     <i class="fas fa-certificate icon-main" style="color: #0095f6;"></i>
@@ -191,7 +182,7 @@
                 <i class="fas fa-chevron-left"></i>
             </a>
 
-            <!-- زر الفيزا المعدل للواتساب -->
+            <!-- زر الفيزا للواتساب -->
             <a href="https://wa.me/21655754413?text=مرحباً%20زيفو،%20أريد%20طلب%20بطاقة%20فيزا%20افتراضية" target="_blank" class="btn-link">
                 <div>
                     <i class="fas fa-credit-card icon-main" style="color: #4CAF50;"></i>
@@ -203,6 +194,7 @@
 
         <div class="section-title">قنوات التواصل الرسمية</div>
         <div class="links-container">
+            <!-- إنستغرام -->
             <a href="https://instagram.com/compte_officiel_zifou" target="_blank" class="btn-link">
                 <div>
                     <i class="fab fa-instagram icon-main" style="color: #E1306C;"></i>
@@ -210,10 +202,19 @@
                 </div>
                 <i class="fas fa-chevron-left"></i>
             </a>
+            <!-- واتساب -->
             <a href="https://wa.me/21655754413" target="_blank" class="btn-link">
                 <div>
                     <i class="fab fa-whatsapp icon-main" style="color: #25D366;"></i>
                     <span>تواصل عبر الواتساب</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <!-- الفيسبوك المعاد -->
+            <a href="https://facebook.com" target="_blank" class="btn-link">
+                <div>
+                    <i class="fab fa-facebook-f icon-main" style="color: #1877F2;"></i>
+                    <span>فيسبوك</span>
                 </div>
                 <i class="fas fa-chevron-left"></i>
             </a>
