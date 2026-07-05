@@ -1,109 +1,227 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zifou Officiel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zifou Officiel | الحساب الرسمي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --accent-color: #c5a059; /* لون ذهبي أنيق يناسب الهوية الشخصية */
+            --text-main: #ffffff;
+            --text-secondary: #bdc3c7;
+        }
 
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#111;
-color:#fff;
-text-align:center;
-}
+        body {
+            margin: 0;
+            padding: 20px 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
-header{
-padding:40px 20px;
-}
+        .profile-card {
+            background-color: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 430px;
+            padding: 35px 20px;
+            text-align: center;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-sizing: border-box;
+        }
 
-.profile{
-width:170px;
-height:170px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid #00bfff;
-}
+        .avatar-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+        }
 
-h1{
-font-size:42px;
-margin:20px 0 10px;
-}
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
 
-p{
-font-size:18px;
-color:#ddd;
-}
+        .verified-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: #0095f6;
+            color: #fff;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            border: 2px solid var(--card-bg);
+        }
 
-.buttons{
-margin-top:30px;
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:320px;
-margin-left:auto;
-margin-right:auto;
-}
+        h1 {
+            font-size: 24px;
+            margin: 10px 0 5px;
+            color: var(--accent-color);
+        }
 
-a{
-text-decoration:none;
-background:#00bfff;
-color:white;
-padding:16px;
-border-radius:12px;
-font-size:20px;
-font-weight:bold;
-transition:.3s;
-}
+        .username {
+            font-size: 15px;
+            color: #85929E;
+            margin-bottom: 20px;
+            direction: ltr;
+            display: inline-block;
+        }
 
-a:hover{
-background:#0099cc;
-}
+        .bio {
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: var(--text-secondary);
+        }
 
-footer{
-margin-top:50px;
-padding:20px;
-color:#888;
-}
-</style>
+        .section-title {
+            font-size: 15px;
+            color: var(--accent-color);
+            margin: 25px 0 12px;
+            text-align: right;
+            padding-right: 8px;
+            border-right: 3px solid var(--accent-color);
+            font-weight: bold;
+        }
 
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.04);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-link i.icon-main {
+            font-size: 18px;
+            margin-left: 10px;
+            width: 25px;
+            text-align: center;
+        }
+
+        .btn-link i.fa-chevron-left {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+
+        /* تأثيرات حركة الأزرار عند الضغط أو التحويم */
+        .btn-link:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent-color);
+            color: #0b0c10;
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
+        }
+
+        /* ألوان مخصصة لشبكات التواصل عند التحويم */
+        .btn-instagram:hover { background-color: #E1306C; color: #fff; box-shadow: 0 5px 15px rgba(225, 48, 108, 0.3); }
+        .btn-whatsapp:hover { background-color: #25D366; color: #fff; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
+        .btn-facebook:hover { background-color: #1877F2; color: #fff; box-shadow: 0 5px 15px rgba(24, 119, 242, 0.3); }
+
+        footer {
+            margin-top: 30px;
+            font-size: 11px;
+            color: #566573;
+        }
+    </style>
 </head>
 <body>
 
-<header>
+    <div class="profile-card">
+        <div class="avatar-container">
+            <!-- سيتم عرض صورتك هنا تلقائياً بمجرد رفع ملف باسم profile.jpg للمستودع -->
+            <img src="profile.jpg" alt="Zifou" class="avatar">
+            <div class="verified-badge" title="حساب موثق">
+                <i class="fas fa-check"></i>
+            </div>
+        </div>
 
-<img src="profile.jpg" class="profile">
+        <h1>Zifou</h1>
+        <div class="username">@compte_officiel_zifou</div>
+        
+        <p class="bio">خدمات رقمية متكاملة | متخصص في توثيق وبناء حسابات إنستغرام، وتوفير الحلول المالية والبطاقات الافتراضية للتسوق والترويج الإعلاني.</p>
 
-<h1>Zifou Officiel</h1>
+        <div class="section-title">خدماتنا الاحترافية</div>
+        <div class="links-container">
+            
+            <a href="https://wa.me/216XXXXXXXX?text=أريد%20طلب%20خدمة%20توثيق%20الحساب" target="_blank" class="btn-link">
+                <div>
+                    <i class="fas fa-certificate icon-main" style="color: #0095f6;"></i>
+                    <span>توثيق حسابات إنستغرام لشخصيات ومشاريع</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </a>
 
-<p>Welcome to my official website.</p>
+            <a href="https://wa.me/216XXXXXXXX?text=أريد%20طلب%20بطاقة%20فيزا%20افتراضية" target="_blank" class="btn-link">
+                <div>
+                    <i class="fas fa-credit-card icon-main" style="color: #4CAF50;"></i>
+                    <span>بطاقات فيزا الدولية للتسوق والإعلانات</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </a>
 
-<div class="buttons">
+            <div class="section-title">قنوات التواصل الرسمية</div>
 
-<a href="https://www.instagram.com/compte_officiel_zifou?igsh=MTR1cm9ocXhubzB4OA==" target="_blank">
-Instagram
-</a>
+            <a href="https://instagram.com/compte_officiel_zifou" target="_blank" class="btn-link btn-instagram">
+                <div>
+                    <i class="fab fa-instagram icon-main"></i>
+                    <span>إنستغرام الرسمي</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </a>
 
-<a href="https://www.facebook.com/share/18hP6g8LgD/" target="_blank">
-Facebook
-</a>
+            <a href="https://wa.me/21655754413" target="_blank" class="btn-link btn-whatsapp">
+                <div>
+                    <i class="fab fa-whatsapp icon-main"></i>
+                    <span>تواصل عبر واتساب</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </a>
 
-<a href="https://wa.me/21655754413" target="_blank">
-WhatsApp
-</a>
+            <a href="https://facebook.com/YOUR_FACEBOOK_USERNAME" target="_blank" class="btn-link btn-facebook">
+                <div>
+                    <i class="fab fa-facebook-f icon-main"></i>
+                    <span>فيسبوك</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            
+        </div>
+    </div>
 
-<a href="mailto:gjzifou9@gmail.com">
-Email
-</a>
-
-</div>
-
-</header>
-
-<footer>
-© 2026 Zifou Officiel
-</footer>
+    <footer>
+        &copy; 2026 Zifou Cloud. جميع الحقوق محفوظة.
+    </footer>
 
 </body>
 </html>
