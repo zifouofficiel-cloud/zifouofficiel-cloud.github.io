@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>D17 | Zifou</title>
+
+<style>
+body{
+margin:0;
+font-family:Segoe UI,Tahoma,sans-serif;
+background:#111827;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+color:white;
+}
+
+.card{
+width:90%;
+max-width:420px;
+background:#1f2937;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 0 25px rgba(0,0,0,.4);
+}
+
+h1{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.number{
+font-size:34px;
+font-weight:bold;
+margin:25px 0;
+letter-spacing:2px;
+color:#25D366;
+}
+
+button,a{
+display:block;
+width:100%;
+padding:16px;
+margin-top:15px;
+border:none;
+border-radius:12px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+}
+
+.copy{
+background:#25D366;
+color:white;
+}
+
+.back{
+background:#444;
+color:white;
+}
+
+button:hover,a:hover{
+opacity:.9;
+}
+</style>
+
+<script>
+function copyNumber(){
+navigator.clipboard.writeText("99127791");
+alert("تم نسخ رقم D17 بنجاح");
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💳 الدفع عبر D17</h1>
+
+<p>قم بتحويل المبلغ إلى الرقم التالي:</p>
+
+<div class="number">99127791</div>
+
+<button class="copy" onclick="copyNumber()">
+📋 نسخ الرقم
+</button>
+
+<a class="back" href="index.html">
+⬅ العودة للرئيسية
+</a>
+
+</div>
+
+</body>
+</html>
