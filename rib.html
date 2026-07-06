@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدفع عبر RIB POSTE</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#111827;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.box{
+    background:#1f2937;
+    width:90%;
+    max-width:420px;
+    border-radius:15px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+h2{
+    color:#FFD700;
+}
+
+.number{
+    background:#2b3648;
+    padding:15px;
+    border-radius:10px;
+    font-size:22px;
+    font-weight:bold;
+    margin:20px 0;
+    word-break:break-all;
+}
+
+.btn{
+    display:block;
+    text-decoration:none;
+    background:#FFD700;
+    color:#111;
+    padding:14px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-top:15px;
+}
+
+.copy{
+    background:#2563eb;
+    color:white;
+}
+
+.back{
+    background:#444;
+    color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>💳 التحويل عبر RIB POSTE</h2>
+
+<p>رقم الحساب:</p>
+
+<div class="number" id="rib">
+5359401742348341
+</div>
+
+<a href="#" class="btn copy" onclick="copyRib()">📋 نسخ رقم الحساب</a>
+
+<a href="https://wa.me/21655754413" class="btn">
+📲 أرسلت التحويل - تواصل عبر واتساب
+</a>
+
+<a href="index.html" class="btn back">
+⬅ العودة للرئيسية
+</a>
+
+</div>
+
+<script>
+function copyRib(){
+navigator.clipboard.writeText("5359401742348341");
+alert("تم نسخ رقم الحساب بنجاح");
+}
+</script>
+
+</body>
+</html>
