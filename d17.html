@@ -9,7 +9,7 @@
 body{
 margin:0;
 font-family:Segoe UI,Tahoma,sans-serif;
-background:#111827;
+background:linear-gradient(135deg,#0f1016,#1c1e24);
 display:flex;
 justify-content:center;
 align-items:center;
@@ -20,16 +20,21 @@ color:white;
 .card{
 width:90%;
 max-width:420px;
-background:#1f2937;
+background:rgba(30,33,45,0.85);
 padding:30px;
 border-radius:20px;
 text-align:center;
-box-shadow:0 0 25px rgba(0,0,0,.4);
+box-shadow:0 15px 35px rgba(0,0,0,.5);
 }
 
 h1{
 color:#d4af37;
 margin-bottom:10px;
+}
+
+p{
+color:#b3b9c9;
+font-size:14px;
 }
 
 .number{
@@ -40,21 +45,27 @@ letter-spacing:2px;
 color:#25D366;
 }
 
-button,a{
+.btn{
 display:block;
 width:100%;
-padding:16px;
-margin-top:15px;
-border:none;
+padding:15px;
+margin-top:12px;
 border-radius:12px;
-font-size:18px;
+font-size:16px;
 font-weight:bold;
-cursor:pointer;
 text-decoration:none;
+cursor:pointer;
+border:none;
+transition:0.3s;
 }
 
 .copy{
 background:#25D366;
+color:white;
+}
+
+.whatsapp{
+background:#0095f6;
 color:white;
 }
 
@@ -63,8 +74,9 @@ background:#444;
 color:white;
 }
 
-button:hover,a:hover{
-opacity:.9;
+.btn:hover{
+transform:translateY(-2px);
+opacity:0.9;
 }
 </style>
 
@@ -87,16 +99,16 @@ alert("تم نسخ رقم D17 بنجاح");
 
 <div class="number">99127791</div>
 
-<a href="https://wa.me/21655754413?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20Zifou%20%D8%8C%20%D9%82%D9%85%D8%AA%20%D8%A8%D8%A7%D9%84%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%D8%B9%D8%A8%D8%B1%20D17%20%D9%88%D9%87%D8%B0%D9%87%20%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D8%B5%D8%A7%D9%84" class="btn">
-📲 لقد قمت بالتحويل - تواصل عبر واتساب
-</a>
-  
-
-<button class="copy" onclick="copyNumber()">
+<button class="btn copy" onclick="copyNumber()">
 📋 نسخ الرقم
 </button>
 
-<a class="back" href="index.html">
+<a class="btn whatsapp"
+href="https://wa.me/21655754413?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20Zifou%20%D8%8C%20%D9%82%D9%85%D8%AA%20%D8%A8%D8%A7%D9%84%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%D8%B9%D8%A8%D8%B1%20D17%20%D9%88%D9%87%D8%B0%D9%87%20%D8%B5%D9%88%D8%B1%D8%A9%20%D8%A7%D9%84%D8%A5%D9%8A%D8%B5%D8%A7%D9%84">
+📲 لقد قمت بالتحويل - تواصل عبر واتساب
+</a>
+
+<a class="btn back" href="index.html">
 ⬅ العودة للرئيسية
 </a>
 
