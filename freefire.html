@@ -1,109 +1,62 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Free Fire | Zifou</title>
-
-<style>
-body{
-margin:0;
-font-family:Segoe UI,Tahoma,sans-serif;
-background:#111827;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-}
-
-.card{
-width:90%;
-max-width:420px;
-background:#1f2937;
-padding:25px;
-border-radius:20px;
-text-align:center;
-}
-
-h1{
-color:#FFD700;
-}
-
-.package{
-background:#374151;
-padding:15px;
-margin-top:15px;
-border-radius:12px;
-font-size:18px;
-}
-
-.btn{
-display:block;
-background:#25D366;
-color:white;
-padding:12px;
-margin-top:10px;
-border-radius:10px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.back{
-background:#444;
-}
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شحن جواهر فري فاير | Zifou</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: #111827; color: white; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        .card { width: 100%; max-width: 420px; background: #1f2937; padding: 25px; border-radius: 20px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        h1 { color: #FFD700; margin-bottom: 20px; }
+        .id-input { width: 90%; padding: 12px; margin-bottom: 20px; border-radius: 10px; border: none; text-align: center; font-size: 16px; background: #374151; color: white; }
+        .package { background: #374151; padding: 15px; margin-bottom: 15px; border-radius: 12px; font-size: 18px; border: 1px solid #4b5563; }
+        .btn { display: block; background: #25D366; color: white; padding: 12px; margin-top: 10px; border-radius: 10px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; width: 100%; font-size: 16px; transition: 0.3s; }
+        .btn:hover { background: #128C7E; }
+        .back { background: #444; margin-top: 20px; }
+    </style>
 </head>
 
 <body>
 
 <div class="card">
+    <h1>🔥 شحن جواهر Free Fire</h1>
+    
+    <input type="text" id="playerId" class="id-input" placeholder="أدخل ID اللاعب هنا أولاً">
 
-<h1>🔥 شحن جواهر Free Fire</h1>
+    <div class="package">
+        💎 100 جوهرة - 5 د.ت
+        <button class="btn" onclick="order('100 جوهرة', '5 د.ت')">اطلب الآن</button>
+    </div>
 
-<div class="package">
-💎 100 جوهرة<br>
-5 د.ت
-<a class="btn" href="https://wa.me/21655754413?text=مرحبا Zifou أريد شحن 100 جوهرة Free Fire">
-اطلب الآن
-</a>
+    <div class="package">
+        💎 310 جوهرة - 15 د.ت
+        <button class="btn" onclick="order('310 جوهرة', '15 د.ت')">اطلب الآن</button>
+    </div>
+
+    <div class="package">
+        💎 520 جوهرة - 25 د.ت
+        <button class="btn" onclick="order('520 جوهرة', '25 د.ت')">اطلب الآن</button>
+    </div>
+
+    <div class="package">
+        💎 1060 جوهرة - 50 د.ت
+        <button class="btn" onclick="order('1060 جوهرة', '50 د.ت')">اطلب الآن</button>
+    </div>
+
+    <a class="btn back" href="index.html">⬅ العودة للرئيسية</a>
 </div>
 
-
-<div class="package">
-💎 310 جوهرة<br>
-15 د.ت
-<a class="btn" href="https://wa.me/21655754413?text=مرحبا Zifou أريد شحن 310 جوهرة Free Fire">
-اطلب الآن
-</a>
-</div>
-
-
-<div class="package">
-💎 520 جوهرة<br>
-25 د.ت
-<a class="btn" href="https://wa.me/21655754413?text=مرحبا Zifou أريد شحن 520 جوهرة Free Fire">
-اطلب الآن
-</a>
-</div>
-
-
-<div class="package">
-💎 1060 جوهرة<br>
-50 د.ت
-<a class="btn" href="https://wa.me/21655754413?text=مرحبا Zifou أريد شحن 1060 جوهرة Free Fire">
-اطلب الآن
-</a>
-</div>
-
-
-<a class="btn back" href="index.html">
-⬅ العودة للرئيسية
-</a>
-
-</div>
+<script>
+    function order(amount, price) {
+        var id = document.getElementById('playerId').value;
+        if(id == "") {
+            alert("الرجاء إدخال ID اللاعب أولاً!");
+            return;
+        }
+        var message = "مرحبا Zifou، أريد شحن " + amount + " (" + price + "). " + "رقم الـ ID الخاص بي هو: " + id;
+        window.open("https://wa.me/21655754413?text=" + encodeURIComponent(message), '_blank');
+    }
+</script>
 
 </body>
 </html>
