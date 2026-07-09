@@ -9,7 +9,7 @@
         body { background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
         
         /* شريط الإشعارات */
-        .ticker { width: 100%; max-width: 400px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.2); color: #d4af37; padding: 8px; border-radius: 12px; margin-bottom: 20px; font-size: 12px; text-align: center; overflow: hidden; white-space: nowrap; }
+        .ticker { width: 100%; max-width: 400px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.2); color: #d4af37; padding: 10px; border-radius: 12px; margin-bottom: 20px; font-size: 13px; text-align: center; overflow: hidden; white-space: nowrap; }
         .ticker span { display: inline-block; animation: marquee 12s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         
@@ -20,7 +20,7 @@
         @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
         .wa-float { animation: pulse 2s infinite; position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; font-size:24px; z-index:1000; text-decoration:none; }
         
-        /* تأثير التوثيق (إضاءة فقط بدون دوران) */
+        /* تأثير التوثيق (إضاءة فقط) */
         @keyframes glow { 0%, 100% { box-shadow: 0 0 5px #0095f6; transform: scale(1); } 50% { box-shadow: 0 0 20px #0095f6; transform: scale(1.05); } }
         .verified-badge { position: absolute; bottom: 5px; right: 5px; background: #0095f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 13px; border: 2px solid #1e212d; animation: glow 2s infinite; }
 
@@ -47,7 +47,7 @@
 <body>
 
 <div class="ticker">
-    <i class="fas fa-rocket"></i> <span>أهلاً بك في Zifou Officiel! فريقنا جاهز لخدمتك بأفضل الأسعار وأسرع تنفيذ في تونس ⚡</span>
+    <span>أهلاً بك في Zifou Officiel! فريقنا جاهز لخدمتك بأفضل الأسعار وأسرع تنفيذ في تونس.</span>
 </div>
 
 <a href="https://wa.me/21655754413" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
