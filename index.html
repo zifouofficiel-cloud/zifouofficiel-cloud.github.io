@@ -10,7 +10,7 @@
         
         /* شريط الإشعارات المتحرك */
         .ticker { width: 100%; max-width: 400px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.2); color: #d4af37; padding: 8px; border-radius: 12px; margin-bottom: 20px; font-size: 12px; text-align: center; overflow: hidden; white-space: nowrap; }
-        .ticker span { display: inline-block; animation: marquee 10s linear infinite; }
+        .ticker span { display: inline-block; animation: marquee 12s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         
         .profile-card { background: rgba(30, 33, 45, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 35px 25px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); animation: fadeIn 1s ease-in-out; }
@@ -20,6 +20,10 @@
         @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
         .wa-float { animation: pulse 2s infinite; position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; font-size:24px; z-index:1000; text-decoration:none; }
         
+        /* حركة اهتزاز الأزرار */
+        @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-2deg); } 75% { transform: rotate(2deg); } }
+        .vibrate-btn { animation: wiggle 3s infinite; }
+
         .avatar-container { position: relative; width: 130px; height: 130px; margin: 0 auto 15px; }
         .avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #d4af37; }
         .verified-badge { position: absolute; bottom: 5px; right: 5px; background: #0095f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 13px; border: 2px solid #1e212d; }
@@ -39,7 +43,9 @@
 </head>
 <body>
 
-<div class="ticker"><i class="fas fa-bell"></i> <span>تم إتمام 12 طلباً بنجاح اليوم في Zifou!</span></div>
+<div class="ticker">
+    <i class="fas fa-rocket"></i> <span>أهلاً بك في Zifou Officiel! فريقنا جاهز لخدمتك بأفضل الأسعار وأسرع تنفيذ في تونس ⚡</span>
+</div>
 
 <a href="https://wa.me/21655754413" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
 
@@ -67,15 +73,15 @@
 
     <div class="section-title">الألعاب والاشتراكات الرقمية</div>
     <div class="links-container">
-        <a href="freefire.html" class="btn-link"><div><i class="fas fa-fire icon-main" style="color: #FF9800;"></i><span>جواهر فري فاير</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="shahid.html" class="btn-link"><div><i class="fas fa-desktop icon-main" style="color: #00B0FF;"></i><span>اشتراكات شاهد VIP</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="netflix.html" class="btn-link"><div><i class="fas fa-film icon-main" style="color: #E50914;"></i><span>اشتراكات Netflix</span></div><i class="fas fa-chevron-left"></i></a>
+        <a href="freefire.html" class="btn-link vibrate-btn"><div><i class="fas fa-fire icon-main" style="color: #FF9800;"></i><span>جواهر فري فاير</span></div><i class="fas fa-chevron-left"></i></a>
+        <a href="shahid.html" class="btn-link vibrate-btn"><div><i class="fas fa-desktop icon-main" style="color: #00B0FF;"></i><span>اشتراكات شاهد VIP</span></div><i class="fas fa-chevron-left"></i></a>
+        <a href="netflix.html" class="btn-link vibrate-btn"><div><i class="fas fa-film icon-main" style="color: #E50914;"></i><span>اشتراكات Netflix</span></div><i class="fas fa-chevron-left"></i></a>
     </div>
 
     <div class="section-title">التسوق والخدمات</div>
     <div class="links-container">
-        <a href="https://www.aliexpress.com" target="_blank" class="btn-link"><div><i class="fas fa-shopping-bag icon-main" style="color:#FF5722;"></i><span>خدمة التسوق الدولي</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="visa.html" class="btn-link"><div><i class="fas fa-credit-card icon-main" style="color:#4CAF50;"></i><span>بطاقات فيزا افتراضية</span></div><i class="fas fa-chevron-left"></i></a>
+        <a href="https://www.aliexpress.com" target="_blank" class="btn-link vibrate-btn"><div><i class="fas fa-shopping-bag icon-main" style="color:#FF5722;"></i><span>خدمة التسوق الدولي</span></div><i class="fas fa-chevron-left"></i></a>
+        <a href="visa.html" class="btn-link vibrate-btn"><div><i class="fas fa-credit-card icon-main" style="color:#4CAF50;"></i><span>بطاقات فيزا افتراضية</span></div><i class="fas fa-chevron-left"></i></a>
     </div>
 
     <div class="section-title">قنوات التواصل</div>
