@@ -8,11 +8,18 @@
     <style>
         body { background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
         
-        /* شريط الإشعارات بتأثير النار */
-        .ticker { width: 100%; max-width: 400px; background: rgba(255, 87, 34, 0.1); border: 1px solid rgba(255, 87, 34, 0.3); color: #ff5722; padding: 10px; border-radius: 12px; margin-bottom: 20px; font-size: 13px; text-align: center; overflow: hidden; white-space: nowrap; box-shadow: 0 0 10px rgba(255, 87, 34, 0.2); animation: fire-flicker 2s infinite alternate; }
-        .ticker span { display: inline-block; animation: marquee 12s linear infinite; font-weight: bold; }
+        /* شريط الإشعارات بتأثير النبض المتدرج */
+        .ticker { 
+            width: 100%; max-width: 400px; 
+            background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.2) 50%, rgba(212,175,55,0.1) 100%); 
+            border: 1px solid rgba(212, 175, 55, 0.3); 
+            color: #d4af37; padding: 10px; border-radius: 12px; margin-bottom: 20px; 
+            font-size: 13px; text-align: center; overflow: hidden; white-space: nowrap; 
+            animation: bg-pulse 3s infinite;
+        }
+        @keyframes bg-pulse { 0% { opacity: 0.8; } 50% { opacity: 1; } 100% { opacity: 0.8; } }
+        .ticker span { display: inline-block; animation: marquee 15s linear infinite; font-weight: 500; }
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-        @keyframes fire-flicker { 0% { border-color: rgba(255, 87, 34, 0.3); } 100% { border-color: rgba(255, 87, 34, 0.6); box-shadow: 0 0 15px rgba(255, 87, 34, 0.4); } }
         
         .profile-card { background: rgba(30, 33, 45, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 35px 25px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); animation: fadeIn 1s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -21,7 +28,7 @@
         @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
         .wa-float { animation: pulse 2s infinite; position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; font-size:24px; z-index:1000; text-decoration:none; }
         
-        /* تأثير التوثيق */
+        /* تأثير التوثيق (إضاءة فقط) */
         @keyframes glow { 0%, 100% { box-shadow: 0 0 5px #0095f6; transform: scale(1); } 50% { box-shadow: 0 0 20px #0095f6; transform: scale(1.05); } }
         .verified-badge { position: absolute; bottom: 5px; right: 5px; background: #0095f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 13px; border: 2px solid #1e212d; animation: glow 2s infinite; }
 
@@ -48,7 +55,7 @@
 <body>
 
 <div class="ticker">
-    <i class="fas fa-fire"></i> <span>Zifou Officiel: خدمات رقمية حصرية بأسعار لا تقبل المنافسة! 🔥</span>
+    <i class="fas fa-star" style="color: #d4af37;"></i> <span>أهلاً بك في Zifou Officiel! نوفر لك خدمات رقمية احترافية وموثوقة بكل أمان.</span>
 </div>
 
 <a href="https://wa.me/21655754413" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
@@ -59,7 +66,6 @@
         <div class="verified-badge"><i class="fas fa-check"></i></div>
     </div>
     <h1>Zifou</h1>
-    <!-- باقي المحتوى كما هو -->
     <div class="stats-container">
         <div class="stat-box"><span class="stat-num">5K+</span><span class="stat-label">عميل سعيد</span></div>
         <div class="stat-box"><span class="stat-num">12K+</span><span class="stat-label">طلب مكتمل</span></div>
