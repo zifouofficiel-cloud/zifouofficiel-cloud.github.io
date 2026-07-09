@@ -6,7 +6,6 @@
     <title>Zifou Officiel | الحساب الرسمي للخدمات الرقمية</title>
     <meta name="description" content="Zifou Officiel - خدمات رقمية متكاملة في تونس: اشتراكات، شحن ألعاب، وبطاقات فيزا افتراضية.">
     
-    <!-- كود تعزيز الظهور في جوجل (Schema) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -27,12 +26,16 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+        body { background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
+        
+        /* شريط الإشعارات الجديد */
+        .ticker { width: 100%; max-width: 400px; background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.2); color: #d4af37; padding: 8px; border-radius: 12px; margin-bottom: 20px; font-size: 12px; text-align: center; overflow: hidden; white-space: nowrap; }
+        
         .profile-card { background: rgba(30, 33, 45, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 35px 25px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); animation: fadeIn 1s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         
         .avatar-container { position: relative; width: 130px; height: 130px; margin: 0 auto 15px; }
-        .avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #d4af37; box-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+        .avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #d4af37; }
         .verified-badge { position: absolute; bottom: 5px; right: 5px; background: #0095f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 13px; border: 2px solid #1e212d; }
         h1 { font-size: 24px; color: #d4af37; margin: 10px 0 20px; font-weight: 700; }
         .bio { font-size: 14px; line-height: 1.6; color: #ffffff; margin-bottom: 25px; font-weight: 500; text-align: right; }
@@ -46,22 +49,23 @@
         .section-title::before { content: ''; display: inline-block; width: 4px; height: 14px; background: #d4af37; border-radius: 2px; }
         .links-container { display: flex; flex-direction: column; gap: 12px; }
         .btn-link { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 16px 18px; display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: #ffffff; transition: all 0.3s ease; }
-        .btn-link div { display: flex; align-items: center; gap: 12px; }
-        .btn-link i.icon-main { font-size: 18px; width: 24px; text-align: center; }
-        .btn-link span { font-size: 14.5px; font-weight: 500; }
-        .btn-link i.fa-chevron-left { font-size: 11px; color: #b3b9c9; }
         .btn-link:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.08); border-color: rgba(212, 175, 55, 0.3); }
         footer { margin-top: 30px; font-size: 11px; color: rgba(255, 255, 255, 0.3); }
     </style>
 </head>
 <body>
 
+<!-- شريط الإشعارات الحي -->
+<div class="ticker">
+    <i class="fas fa-bell"></i> تم إتمام 12 طلباً بنجاح اليوم في Zifou!
+</div>
+
 <a href="https://wa.me/21655754413" target="_blank" style="position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; font-size:24px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index:1000;"><i class="fab fa-whatsapp"></i></a>
 
 <div class="profile-card">
     <div class="avatar-container">
         <img src="file_00000000d9e071f4beb55ef0783fdebc.png" alt="Zifou" class="avatar">
-        <div class="verified-badge" title="حساب موثق"><i class="fas fa-check"></i></div>
+        <div class="verified-badge"><i class="fas fa-check"></i></div>
     </div>
 
     <h1>Zifou</h1>
@@ -72,37 +76,22 @@
         <div class="stat-box"><span class="stat-num">50K+</span><span class="stat-label">زيارة</span></div>
     </div>
       
-    <p class="bio">نقدم لكم في Zifou خدمات رقمية متكاملة ومميزة في تونس، حيث نوفر حلولاً سهلة، آمنة وموثوقة في مكان واحد. نحن نتميز بتقديم خدمات سريعة وموثوقة مع دعم متواصل 7/7 بأسعار تنافسية.</p>
+    <p class="bio">نقدم لكم في Zifou خدمات رقمية متكاملة ومميزة في تونس. حلول سهلة، آمنة وموثوقة مع دعم متواصل 7/7 بأسعار تنافسية.</p>
 
-    <!-- قسم الثقة الجديد -->
     <div class="section-title">لماذا يختارنا عملاؤنا؟</div>
-    <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 16px; margin-bottom: 20px; text-align: right; font-size: 13px; line-height: 1.6; border-right: 3px solid #d4af37;">
+    <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 16px; text-align: right; font-size: 13px; line-height: 1.6; border-right: 3px solid #d4af37;">
         <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 8px;">✅ دعم فني سريع ومتواصل 7/7</li>
-            <li style="margin-bottom: 8px;">✅ أسعار تنافسية ومناسبة للسوق التونسي</li>
-            <li style="margin-bottom: 8px;">✅ شفافية تامة في كل عمليات الشراء</li>
-            <li>✅ خبرة سنوات في التعامل مع المواقع الدولية</li>
+            <li>✅ دعم فني سريع ومتواصل 7/7</li>
+            <li>✅ أسعار تنافسية للسوق التونسي</li>
+            <li>✅ شفافية تامة في كل العمليات</li>
         </ul>
     </div>
 
-    <div class="section-title">الألعاب والاشتراكات الرقمية</div>
+    <div class="section-title">الخدمات الرقمية</div>
     <div class="links-container">
         <a href="freefire.html" class="btn-link"><div><i class="fas fa-fire icon-main" style="color: #FF9800;"></i><span>جواهر فري فاير</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="shahid.html" class="btn-link"><div><i class="fas fa-desktop icon-main" style="color: #00B0FF;"></i><span>اشتراكات شاهد VIP</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="netflix.html" class="btn-link"><div><i class="fas fa-film icon-main" style="color: #E50914;"></i><span>اشتراكات Netflix</span></div><i class="fas fa-chevron-left"></i></a>
-    </div>
-
-    <div class="section-title">التسوق والخدمات</div>
-    <div class="links-container">
-        <a href="https://www.aliexpress.com" target="_blank" class="btn-link"><div><i class="fas fa-shopping-bag icon-main" style="color:#FF5722;"></i><span>خدمة التسوق الدولي</span></div><i class="fas fa-chevron-left"></i></a>
         <a href="visa.html" class="btn-link"><div><i class="fas fa-credit-card icon-main" style="color:#4CAF50;"></i><span>بطاقات فيزا افتراضية</span></div><i class="fas fa-chevron-left"></i></a>
-    </div>
-
-    <div class="section-title">قنوات التواصل</div>
-    <div class="links-container">
-        <a href="https://wa.me/21655754413" target="_blank" class="btn-link"><div><i class="fab fa-whatsapp icon-main" style="color: #25D366;"></i><span>واتساب (WhatsApp)</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="https://www.facebook.com/share/1P6t6ej1Yy/" target="_blank" class="btn-link"><div><i class="fab fa-facebook-f icon-main" style="color: #1877F2;"></i><span>فايسبوك (Facebook)</span></div><i class="fas fa-chevron-left"></i></a>
-        <a href="https://instagram.com/compte_officiel_zifou" target="_blank" class="btn-link"><div><i class="fab fa-instagram icon-main" style="color: #E1306C;"></i><span>إنستغرام (Instagram)</span></div><i class="fas fa-chevron-left"></i></a>
+        <a href="https://wa.me/21655754413" target="_blank" class="btn-link"><div><i class="fab fa-whatsapp icon-main" style="color: #25D366;"></i><span>تواصل معنا (واتساب)</span></div><i class="fas fa-chevron-left"></i></a>
     </div>
 
     <footer>جميع الحقوق محفوظة © 2026</footer>
