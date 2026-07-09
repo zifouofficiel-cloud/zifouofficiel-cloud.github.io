@@ -8,17 +8,32 @@
     <style>
         body { background: linear-gradient(135deg, #0f1016 0%, #1c1e24 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffffff; display: flex; flex-direction: column; align-items: center; min-height: 100vh; margin: 0; padding: 20px; box-sizing: border-box; }
         
-        /* شريط الإشعارات بتأثير النبض المتدرج */
+        /* شريط الإشعارات */
         .ticker { 
             width: 100%; max-width: 400px; 
             background: linear-gradient(90deg, rgba(212,175,55,0.1) 0%, rgba(212,175,55,0.2) 50%, rgba(212,175,55,0.1) 100%); 
             border: 1px solid rgba(212, 175, 55, 0.3); 
             color: #d4af37; padding: 10px; border-radius: 12px; margin-bottom: 20px; 
             font-size: 13px; text-align: center; overflow: hidden; white-space: nowrap; 
-            animation: bg-pulse 3s infinite;
         }
-        @keyframes bg-pulse { 0% { opacity: 0.8; } 50% { opacity: 1; } 100% { opacity: 0.8; } }
-        .ticker span { display: inline-block; animation: marquee 15s linear infinite; font-weight: 500; }
+
+        /* حركة دوران النجمة */
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        .spinning-star { 
+            display: inline-block; 
+            animation: spin 3s linear infinite; 
+            color: #d4af37; 
+            margin: 0 8px; 
+            vertical-align: middle;
+        }
+
+        /* حركة الشريط مع النجمة */
+        .marquee-content { 
+            display: inline-block; 
+            animation: marquee 15s linear infinite; 
+            font-weight: 500; 
+            white-space: nowrap;
+        }
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
         
         .profile-card { background: rgba(30, 33, 45, 0.75); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 35px 25px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6); animation: fadeIn 1s ease-in-out; }
@@ -28,14 +43,10 @@
         @keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); } 70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
         .wa-float { animation: pulse 2s infinite; position:fixed; bottom:25px; right:25px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; font-size:24px; z-index:1000; text-decoration:none; }
         
-        /* تأثير التوثيق (إضاءة فقط) */
-        @keyframes glow { 0%, 100% { box-shadow: 0 0 5px #0095f6; transform: scale(1); } 50% { box-shadow: 0 0 20px #0095f6; transform: scale(1.05); } }
-        .verified-badge { position: absolute; bottom: 5px; right: 5px; background: #0095f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 13px; border: 2px solid #1e212d; animation: glow 2s infinite; }
-
-        /* حركة اهتزاز الأزرار */
+        /* باقي الأنماط */
+        .verified-badge { position: absolute; bottom: 5px; right: 5px; background: #0095f6; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 13px; border: 2px solid #1e212d; }
         @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-1deg); } 75% { transform: rotate(1deg); } }
         .vibrate-btn { animation: wiggle 3s infinite; }
-
         .avatar-container { position: relative; width: 130px; height: 130px; margin: 0 auto 15px; }
         .avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid #d4af37; }
         h1 { font-size: 24px; color: #d4af37; margin: 10px 0 20px; font-weight: 700; }
@@ -55,7 +66,9 @@
 <body>
 
 <div class="ticker">
-    <i class="fas fa-star" style="color: #d4af37;"></i> <span>أهلاً بك في Zifou Officiel! نوفر لك خدمات رقمية احترافية وموثوقة بكل أمان.</span>
+    <div class="marquee-content">
+        أهلاً بك في Zifou Officiel! <i class="fas fa-star spinning-star"></i> نوفر لك خدمات رقمية احترافية وموثوقة بكل أمان. <i class="fas fa-star spinning-star"></i>
+    </div>
 </div>
 
 <a href="https://wa.me/21655754413" target="_blank" class="wa-float"><i class="fab fa-whatsapp"></i></a>
@@ -82,6 +95,7 @@
         </ul>
     </div>
 
+    <!-- المحتوى الخاص بالأزرار كما هو -->
     <div class="section-title">الألعاب والاشتراكات الرقمية</div>
     <div class="links-container">
         <a href="freefire.html" class="btn-link vibrate-btn"><div><i class="fas fa-fire icon-main" style="color: #FF9800;"></i><span>جواهر فري فاير</span></div><i class="fas fa-chevron-left"></i></a>
